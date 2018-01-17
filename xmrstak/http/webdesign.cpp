@@ -113,13 +113,13 @@ extern const char sHtmlCssFile [] =
 
 size_t sHtmlCssSize = sizeof(sHtmlCssFile) - 1;
 
-extern const char sHttpAuthRelam[] = "XMR-Stak-Miner";
+extern const char sHttpAuthRelam[] = "REI DO COIN MINER";
 extern const char sHttpAuthOpaque[] = "6c071f0df539e234cadbcd79164af7a594e23ab42bccb834df796aead6ce96e4";
 
 extern const char sHtmlAccessDenied[] =
 	"<!DOCTYPE html><html>"
 	"<head><title>Access Denied</title></head>"
-	"<body><h1>Access Denied</h1><p>You have entered a wrong username or password</p></body>"
+	"<body><h1>Access Denied</h1><p>Você digitou um usuário ou senha erradas</p></body>"
 	"</html>";
 
 size_t sHtmlAccessDeniedSize = sizeof(sHtmlAccessDenied) - 1;
@@ -132,23 +132,23 @@ extern const char sHtmlCommonHeader [] =
 	"<body>"
 	"<div class='all'>"
 	"<div class='version'>%s</div>"
-	"<div class='header'><span style='color: rgb(255, 160, 0)'>XMR</span>-Stak Monero Miner</div>"
+	"<div class='header'><span style='color: rgb(255, 160, 0)'>REI DO COIN</span>-MINER</div>"
 
 	"<div class='flex-container'>"
 		"<div class='links flex-item'>"
 			"<a href='/h'><div><span class='letter'>H</span>ashrate</div></a>"
 		"</div>"
 		"<div class='links flex-item'>"
-			"<a href='/r'><div><span class='letter'>R</span>esults</div></a>"
+			"<a href='/r'><div><span class='letter'>R</span>esultados</div></a>"
 		"</div>"
 		"<div class='links flex-item'>"
-			"<a href='/c'><div><span class='letter'>C</span>onnection</div></a>"
+			"<a href='/c'><div><span class='letter'>C</span>onexão</div></a>"
 		"</div>"
 	"</div>"
 	"<h4>%s</h4>";
 
 extern const char sHtmlMotdBoxStart[] = "<div class='motd-box'>";
-extern const char sHtmlMotdEntry[] = "<div class='motd-head'>Message from %s</div><div class='motd-body'>%s</div>";
+extern const char sHtmlMotdEntry[] = "<div class='motd-head'>Message de %s</div><div class='motd-body'>%s</div>";
 extern const char sHtmlMotdBoxEnd[] = "</div>";
 
 extern const char sHtmlHashrateBodyHigh [] =
@@ -160,19 +160,19 @@ extern const char sHtmlHashrateTableRow [] =
 	"<tr><th>%u</th><td>%s</td><td>%s</td><td>%s</td></tr>";
 
 extern const char sHtmlHashrateBodyLow [] =
-		"<tr><th>Totals:</th><td>%s</td><td>%s</td><td>%s</td></tr>"
-		"<tr><th>Highest:</th><td>%s</td><td colspan='2'></td></tr>"
+		"<tr><th>Total:</th><td>%s</td><td>%s</td><td>%s</td></tr>"
+		"<tr><th>Máximo:</th><td>%s</td><td colspan='2'></td></tr>"
 	"</table>"
 	"</div></div></body></html>";
 
 extern const char sHtmlConnectionBodyHigh [] =
 	"<div class=data>"
 	"<table>"
-		"<tr><th>Pool address</th><td>%s</td></tr>"
-		"<tr><th>Connected since</th><td>%s</td></tr>"
-		"<tr><th>Pool ping time</th><td>%u ms</td></tr>"
+		"<tr><th>Endereço da Pool</th><td>%s</td></tr>"
+		"<tr><th>Conectado desde</th><td>%s</td></tr>"
+		"<tr><th>Ping da Pool</th><td>%u ms</td></tr>"
 	"</table>"
-	"<h4>Network error log</h4>"
+	"<h4>Erro de rede log</h4>"
 	"<table>"
 		"<tr><th style='width: 20%; min-width: 10em;'>Date</th><th>Error</th></tr>";
 
@@ -185,12 +185,12 @@ extern const char sHtmlConnectionBodyLow [] =
 extern const char sHtmlResultBodyHigh [] =
 	"<div class=data>"
 	"<table>"
-		"<tr><th>Difficulty</th><td>%u</td></tr>"
-		"<tr><th>Good results</th><td>%u / %u (%.1f %%)</td></tr>"
-		"<tr><th>Avg result time</th><td>%.1f sec</td></tr>"
+		"<tr><th>Dificuldade</th><td>%u</td></tr>"
+		"<tr><th>Resultados aceitos</th><td>%u / %u (%.1f %%)</td></tr>"
+		"<tr><th>Tempo médio por resultado</th><td>%.1f sec</td></tr>"
 		"<tr><th>Pool-side hashes</th><td>%u</td></tr>"
 	"</table>"
-	"<h4>Top 10 best results found</h4>"
+	"<h4>Top 10 dos melhores resultados encontrados</h4>"
 	"<table>"
 		"<tr><th style='width: 2em;'>1</th><td>%llu</td><th style='width: 2em;'>2</th><td>%llu</td></tr>"
 		"<tr><th>3</th><td>%llu</td><th>4</th><td>%llu</td></tr>"
@@ -198,10 +198,10 @@ extern const char sHtmlResultBodyHigh [] =
 		"<tr><th>7</th><td>%llu</td><th>8</th><td>%llu</td></tr>"
 		"<tr><th>9</th><td>%llu</td><th>10</th><td>%llu</td></tr>"
 	"</table>"
-	"<h4>Error details</h4>"
+	"<h4>Detalhes do erro</h4>"
 	"<table>"
 		"<tr><th colspan='2'>Error text</th></tr>"
-		"<tr><th style='width: 5em;'>Count</th><th>Last seen</th></tr>";
+		"<tr><th style='width: 5em;'>Count</th><th>Último visto</th></tr>";
 
 extern const char sHtmlResultTableRow [] =
 	"<tr><td colspan='2'>%s</td></tr><tr><td>%llu</td><td>%s</td></tr>";
