@@ -19,6 +19,7 @@
   * covered by the terms of OpenSSL License and SSLeay License, the licensors
   * of this Program grant you additional permission to convey the resulting work.
   *
+  *Esse programa foi forkado e modificado por mim, dono do diretório, para atender minhas necessidades
   */
 
 #include "xmrstak/misc/executor.hpp"
@@ -389,7 +390,7 @@ int main(int argc, char *argv[])
 			++i;
 			if( i >=argc )
 			{
-				printer::inst()->print_msg(L0, "No argument for parameter '--cpu' given");
+				printer::inst()->print_msg(L0, "Sem argumentos para o parâmetro '--cpu' given");
 				win_exit();
 				return 1;
 			}
@@ -400,7 +401,7 @@ int main(int argc, char *argv[])
 			++i;
 			if( i >=argc )
 			{
-				printer::inst()->print_msg(L0, "No argument for parameter '--amd' given");
+				printer::inst()->print_msg(L0, "Sem argumentos para o parâmetro '--amd' given");
 				win_exit();
 				return 1;
 			}
@@ -411,7 +412,7 @@ int main(int argc, char *argv[])
 			++i;
 			if( i >=argc )
 			{
-				printer::inst()->print_msg(L0, "No argument for parameter '--nvidia' given");
+				printer::inst()->print_msg(L0, "Sem argumentos para o parâmetro '--nvidia' given");
 				win_exit();
 				return 1;
 			}
@@ -422,7 +423,7 @@ int main(int argc, char *argv[])
 			++i;
 			if( i >=argc )
 			{
-				printer::inst()->print_msg(L0, "No argument for parameter '--currency' given");
+				printer::inst()->print_msg(L0, "Sem argumentos para o parâmetro '--currency' given");
 				win_exit();
 				return 1;
 			}
@@ -433,7 +434,7 @@ int main(int argc, char *argv[])
 			++i;
 			if( i >=argc )
 			{
-				printer::inst()->print_msg(L0, "No argument for parameter '-o/--url' given");
+				printer::inst()->print_msg(L0, "Sem argumentos para o parâmetro '-o/--url' given");
 				win_exit();
 				return 1;
 			}
@@ -445,7 +446,7 @@ int main(int argc, char *argv[])
 			++i;
 			if( i >=argc )
 			{
-				printer::inst()->print_msg(L0, "No argument for parameter '-O/--tls-url' given");
+				printer::inst()->print_msg(L0, "Sem argumentos para o parâmetro '-O/--tls-url' given");
 				win_exit();
 				return 1;
 			}
@@ -456,7 +457,7 @@ int main(int argc, char *argv[])
 		{
 			if(!pool_url_set)
 			{
-				printer::inst()->print_msg(L0, "Pool address has to be set if you want to specify username and password.");
+				printer::inst()->print_msg(L0, "O endereço da pool deve ser definido se você quiser especificar o nome de usuário e a senha.");
 				win_exit();
 				return 1;
 			}
@@ -464,7 +465,7 @@ int main(int argc, char *argv[])
 			++i;
 			if( i >=argc )
 			{
-				printer::inst()->print_msg(L0, "No argument for parameter '-u/--user' given");
+				printer::inst()->print_msg(L0, "Sem argumentos para o parâmetro '-u/--user' given");
 				win_exit();
 				return 1;
 			}
@@ -474,7 +475,7 @@ int main(int argc, char *argv[])
 		{
 			if(!pool_url_set)
 			{
-				printer::inst()->print_msg(L0, "Pool address has to be set if you want to specify username and password.");
+				printer::inst()->print_msg(L0, "O endereço do pool deve ser definido se você quiser especificar o nome de usuário e a senha.");
 				win_exit();
 				return 1;
 			}
@@ -482,7 +483,7 @@ int main(int argc, char *argv[])
 			++i;
 			if( i >=argc )
 			{
-				printer::inst()->print_msg(L0, "No argument for parameter '-p/--pass' given");
+				printer::inst()->print_msg(L0, "Sem argumentos para o parâmetro '-p/--pass' given");
 				win_exit();
 				return 1;
 			}
@@ -498,7 +499,7 @@ int main(int argc, char *argv[])
 			++i;
 			if( i >=argc )
 			{
-				printer::inst()->print_msg(L0, "No argument for parameter '-c/--config' given");
+				printer::inst()->print_msg(L0, "Sem argumentos para o parâmetro '-c/--config' given");
 				win_exit();
 				return 1;
 			}
@@ -510,7 +511,7 @@ int main(int argc, char *argv[])
 		}
 		else
 		{
-			printer::inst()->print_msg(L0, "Parameter unknown '%s'",argv[i]);
+			printer::inst()->print_msg(L0, "Parâmetro desconhecido '%s'",argv[i]);
 			win_exit();
 			return 1;
 		}
@@ -560,24 +561,25 @@ int main(int argc, char *argv[])
 	printer::inst()->print_str("-------------------------------------------------------------------\n");
 	printer::inst()->print_str(get_version_str_short().c_str());
 	printer::inst()->print_str("\n\n");
-	printer::inst()->print_str("Brought to you by fireice_uk and psychocrypt under GPLv3.\n");
-	printer::inst()->print_str("Based on CPU mining code by wolf9466 (heavily optimized by fireice_uk).\n");
+	printer::inst()->print_str("Patrocinado basicamente por fireice_uk e psychocrypt sob GPLv3.\n");
+	printer::inst()->print_str("CPU miner com código baseado em wolf9466 (otimizado por fireice_uk).\n");
 #ifndef CONF_NO_CUDA
-	printer::inst()->print_str("Based on NVIDIA mining code by KlausT and psychocrypt.\n");
+	printer::inst()->print_str("NVIDIA miner com código baseado em KlausT e psychocrypt.\n");
 #endif
 #ifndef CONF_NO_OPENCL
-	printer::inst()->print_str("Based on OpenCL mining code by wolf9466.\n");
+	printer::inst()->print_str("OpenCL miner com código baseado em wolf9466.\n");
 #endif
+	printer::inst()->print_str("Programa modificado e traduzido por Matheus-Bach\n");
 	char buffer[64];
 	snprintf(buffer, sizeof(buffer), "\nConfigurable dev donation level is set to %.1f%%\n\n", fDevDonationLevel * 100.0);
 	printer::inst()->print_str(buffer);
-	printer::inst()->print_str("You can use following keys to display reports:\n");
+	printer::inst()->print_str("Você pode teclar para exibir reports:\n");
 	printer::inst()->print_str("'h' - hashrate\n");
-	printer::inst()->print_str("'r' - results\n");
-	printer::inst()->print_str("'c' - connection\n");
+	printer::inst()->print_str("'r' - resultadoss\n");
+	printer::inst()->print_str("'c' - conexão\n");
 	printer::inst()->print_str("-------------------------------------------------------------------\n");
 	if(::jconf::inst()->IsCurrencyMonero())
-		printer::inst()->print_msg(L0,"Start mining: MONERO");
+		printer::inst()->print_msg(L0,"Minerando pela Rei do Coin!");
 	else
 		printer::inst()->print_msg(L0,"Start mining: AEON");
 
