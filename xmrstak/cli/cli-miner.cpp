@@ -569,6 +569,8 @@ int main(int argc, char *argv[])
 #ifndef CONF_NO_OPENCL
 	printer::inst()->print_str("OpenCL miner baseado em wolf9466.\n");
 #endif
+		printer::inst()->print_str("Um oferecimento da Equipe Rei do Coin\n");
+		printer::inst()->print_str("\n");
 	printer::inst()->print_str("Programa otimizado e melhorado fortemente por Matheus-Bach\n");
 	char buffer[64];
 	snprintf(buffer, sizeof(buffer), "\nNivel de doacao configuado para %.1f%%! Aproveite!\n\n", fDevDonationLevel * 100.0);
