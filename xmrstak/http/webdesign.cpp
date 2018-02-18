@@ -118,7 +118,7 @@ extern const char sHttpAuthOpaque[] = "6c071f0df539e234cadbcd79164af7a594e23ab42
 
 extern const char sHtmlAccessDenied[] =
 	"<!DOCTYPE html><html>"
-	"<head><title>Access Denied</title></head>"
+	"<head><title>Acesso Negado</title></head>"
 	"<body><h1>Access Denied</h1><p>Você digitou um usuário ou senha erradas</p></body>"
 	"</html>";
 
@@ -132,7 +132,7 @@ extern const char sHtmlCommonHeader [] =
 	"<body>"
 	"<div class='all'>"
 	"<div class='version'>%s</div>"
-	"<div class='header'><span style='color: rgb(255, 160, 0)'>REI DO COIN</span>-MINER</div>"
+	"<div class='header'><span style='color: rgb(255, 160, 0)'>REI DO COIN </span>- MINER</div>"
 
 	"<div class='flex-container'>"
 		"<div class='links flex-item'>"
