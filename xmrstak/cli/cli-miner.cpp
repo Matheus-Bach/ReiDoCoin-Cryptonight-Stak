@@ -562,21 +562,21 @@ int main(int argc, char *argv[])
 	printer::inst()->print_str(get_version_str_short().c_str());
 	printer::inst()->print_str("\n\n");
 	printer::inst()->print_str("Patrocinado basicamente por fireice_uk e psychocrypt sob GPLv3.\n");
-	printer::inst()->print_str("CPU miner com código baseado em wolf9466 (otimizado por fireice_uk).\n");
+	printer::inst()->print_str("CPU miner baseado em wolf9466 (otimizado por fireice_uk).\n");
 #ifndef CONF_NO_CUDA
-	printer::inst()->print_str("NVIDIA miner com código baseado em KlausT e psychocrypt.\n");
+	printer::inst()->print_str("NVIDIA miner baseado em KlausT e psychocrypt.\n");
 #endif
 #ifndef CONF_NO_OPENCL
-	printer::inst()->print_str("OpenCL miner com código baseado em wolf9466.\n");
+	printer::inst()->print_str("OpenCL miner baseado em wolf9466.\n");
 #endif
-	printer::inst()->print_str("Programa modificado e traduzido por Matheus-Bach\n");
+	printer::inst()->print_str("Programa otimizado e melhorado fortemente por Matheus-Bach\n");
 	char buffer[64];
-	snprintf(buffer, sizeof(buffer), "\nConfigurable dev donation level is set to %.1f%%\n\n", fDevDonationLevel * 100.0);
+	snprintf(buffer, sizeof(buffer), "\nNivel de doacao configuado para %.1f%%! Aproveite!\n\n", fDevDonationLevel * 100.0);
 	printer::inst()->print_str(buffer);
-	printer::inst()->print_str("Você pode teclar para exibir reports:\n");
-	printer::inst()->print_str("'h' - hashrate\n");
-	printer::inst()->print_str("'r' - resultadoss\n");
-	printer::inst()->print_str("'c' - conexão\n");
+	printer::inst()->print_str("Voce pode teclar para exibir:\n");
+	printer::inst()->print_str("'H' - hashrate\n");
+	printer::inst()->print_str("'R' - resultadoss\n");
+	printer::inst()->print_str("'C' - conexao\n");
 	printer::inst()->print_str("-------------------------------------------------------------------\n");
 	if(::jconf::inst()->IsCurrencyMonero())
 		printer::inst()->print_msg(L0,"Minerando pela Rei do Coin!");
@@ -625,7 +625,7 @@ void do_benchmark()
 	using namespace std::chrono;
 	std::vector<xmrstak::iBackend*>* pvThreads;
 
-	printer::inst()->print_msg(L0, "Running a 60 second benchmark...");
+	printer::inst()->print_msg(L0, "Rodando 60 segundos de benchmark...");
 
 	uint8_t work[76] = {0};
 	xmrstak::miner_work oWork = xmrstak::miner_work("", work, sizeof(work), 0, false, 0);
